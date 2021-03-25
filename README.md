@@ -1,5 +1,22 @@
 # ChatQuest
  
+## Development Notes
+This is a completely serverless cloud based game and chat bot. 
+
+The OAuth login cloud function sets up the quest and database entries and subscribes to EventSub for that broadcaster.
+
+All logic is handled on each EventSub event that comes into the app.
+- This will start the game with the "Start Quest" Reward
+- Attack and deduct HP from the boss with the action rewards
+- Determine if the boss was killed, and "Complete" the quest in the database.
+- Refund points because of async nature if the boss's HP is already at or below zero.
+- Clear out current quest from database, and start a new quest.
+
+If a chat message needs to be sent to Twitch, it spins up a chat client, send the message, then disconnects from the chat server.
+- This reduces costs because we don't need a server running 24/7 just to handle chat messages.
+- The downfall to this process is there is a few second delay for each message because of the nature of serverless.
+ - The upside, it is actually slows the game down a bit, and during testing it worked out really well because it didn't spam chat as fast as a natively running chatbot would.
+
 ## Setting Env Variables
 Rename env.sample.json to env.json
 ```
