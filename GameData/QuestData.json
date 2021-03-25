@@ -1,0 +1,110 @@
+[
+  {
+    "name": "All Endings Have a beginning",
+    "description": "New to the adventures life you finally embark on your first quest. What lies ahead is not only a mystery to you, but the gods themselves. For your fate is the only one they can not determine. Will you forge your name in the stars or will you fall to the fangs and claws of the beast of legend.",
+    "shortDescription": "It's time to get out of bed, no more lazy days for you adventurer. Glory is for the diligent!",
+    "incrementAdjustment": 1800000,
+    "boss": {
+      "name": "Yuzar",
+      "description": "Manticore: body of a lion, head of a man, bat like wings, and scorpion tail",
+      "incrementAdjustment": 7,
+      "minHPMultipler": 0.5,
+      "maxHPMultipler": 0.5
+    },
+    "attacks": [
+      {
+        "name": "Sword Slash",
+        "description": "A regular sword attack",
+        "type": "Physical",
+        "damage": 3,
+        "color": "#ED7014",
+        "maxPerQuest": 6,
+        "hpUnlockPercent": 100
+      },
+      {
+        "name": "Earth Needle",
+        "description": "Using magical energy you form a small needle to pierce your target",
+        "type": "Magical",
+        "damage": 10,
+        "color": "#234F1E",
+        "maxPerQuest": 3,
+        "hpUnlockPercent": 100
+      },
+      {
+        "name": "Bomb",
+        "description": "A small bomb with a big blast",
+        "type": "Physical",
+        "damage": 30,
+        "color": "#FFFFFF",
+        "maxPerQuest": 1,
+        "hpUnlockPercent": 100
+      }
+    ]
+  },
+  {
+    "name": "The Brewing Storm",
+    "description": "With your first quest complete you follow the whispers of the winds telling you of great fame and fortune. With sword in hand you march forward to find that your path is blocked by sand and waves that stretch beyond the horizon. While pondering on what to do a shady man offering you voyage for a small sum. You are weary of the man but with little option you agree. Though you are confident in your skill the sea can be cruel to those who do not revere its majesty.",
+    "shortDescription": "The tides of fate ebb and flow as you are carried forward to the most unforgiving mistress!",
+    "incrementAdjustment": 1800000,
+    "boss": {
+      "name": "Umibōzu",
+      "description": "Giant, shadowy, humanoid-like monster",
+      "incrementAdjustment": 4,
+      "minHPMultipler": 0.5,
+      "maxHPMultipler": 0.5
+    },
+    "attacks": [
+      {
+        "name": "Paris' Bow",
+        "description": "A regular arrow fired in quick succession",
+        "type": "Physical",
+        "damage": 2,
+        "color": "#ED7014",
+        "maxPerQuest": 10,
+        "hpUnlockPercent": 100
+      },
+      {
+        "name": "Earth Needle",
+        "description": "Using magical energy you form a small needle to pierce your target",
+        "type": "Magical",
+        "damage": 10,
+        "color": "#234F1E",
+        "maxPerQuest": 5,
+        "hpUnlockPercent": 100
+      }
+    ]
+  },
+  {
+    "name": "Legends Forge On",
+    "description": "You might have won the battle but it came with a cost. Wounded, and unarmed you float ashore of an unknown island. Though you are alive you know that will change unless you push on and soon, that much is clear from the overwhelming presence you feel approaching you at a terrifying speed. Though you try with all your might to get away you are forced to confront what you presume to be the lord of this domain.",
+    "shortDescription": "I once heard a story of a warrior who fought simply with the force of will because she knew when all was lost the only thing that remained was yourself.",
+    "incrementAdjustment": 1800000,
+    "boss": {
+      "name": "Mushu",
+      "description": "Kanlaon Dragon: A mad dragon, with dark green scales.",
+      "incrementAdjustment": 2,
+      "minHPMultipler": 0.5,
+      "maxHPMultipler": 0.5
+    },
+    "attacks": [
+      {
+        "name": "Punch",
+        "description": "Physical",
+        "type": "Physical",
+        "damage": 1,
+        "color": "#ED7014",
+        "maxPerQuest": 30,
+        "hpUnlockPercent": 100
+      },
+      {
+        "name": "Wrath of the Gods",
+        "description": "Faced with overwhelming odds the inherit blood begins to rise and releases a blinding flash that destroys all!",
+        "type": "Spirit",
+        "damage": 400,
+        "color": "#000000",
+        "maxPerQuest": 1,
+        "hpUnlockPercent": 10
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+Mini bosses count towards boss fight like blight ganons
+Mini Boss Joins Team if you beat them
+
+Raid:
+Start a raid with Channel Points -
+	Set a goal amount (1K)
+	Set a contriubtion amount (100)
+	Set a goal timer (5 minutes)
+	After 5 minutes, if goal not met, Reset goal, and refund point
+	If goal it met, complete redemption and delete contriubtion reward and start raid.
+Action Buttons -
+	Release all at once, or stagger?
+	bring down XP enough, it unlocks another action, then stagger the cooldown. action 1 5 min, action 2 10 min, action 3 12 min, action 4 1 use.
+	x minute cooldown between redemption
+	HP or Effect associated with it
+		Attack -
+		Magic
+		Pew Pew
+		Use Spell of Fire
+Boss HP - HP bar + Raid Countdown
+	Interaction % both channel based and global
+	Go by current viewer count - Find a % and do maths
+	Find number of actions per viewer, both globally and locally
+	Best Stats are going to be losses to determine next HP
+
+
+Details Needed
+	Quest Description
+		Name
+		Description
+		Color
+	Boss Description
+	Action Description
+		Name
+		Description
+		Color
+	Action Release Scale
+		How Many Minute
+
+Change White/Black to different color.

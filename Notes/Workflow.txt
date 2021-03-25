@@ -1,0 +1,25 @@
+Workflow
+1. Broadcaster Signs into App
+2. Broadcaster Turns On Game/Updates Settings
+3. Game Creates "Start Quest" Reward
+4. User redeems "Start Quest" Reward
+5. Game received "Start Quest" redemption
+6. Game Try to start
+    6a. If Game is already started, reject redemption (multiple people starting at once)
+    6b. If game is not started, accept redemption and mark complete
+    6c. If overlay is turned on, a "timed" game can be started
+    6d. If overlay is turned off, only an HP game can be started (we are not running a server to check for timing, the overlay will be used to track timers).
+    6e. Choose Quest
+        6ei. How do we choose quest?
+7. Game deletes "Start Quest" Reward
+8. Game posts in chat/pushes to ovarlay game starting information
+9. Game creates action Rewards for current boss HP level
+10. Users redeem actions
+11. Game increments current HP on each redemption.
+    11a. If redemption comes in after HP is 0, reject redemption (timing if boss already killed)
+    11b. If boss still has HP, increment, and complete redemption
+12. If boss HP goes below 0 on an action, delete rewards, complete round.
+
+Gotchas:
+1a. If overlay is turned off mid game, stop game, game will convert to "HP only" game. If overlay comes back online, timers are lost and cannot be restarted.
+1b. If overlay is disconnected, we can resume timer as long as overlay still is counting down in memory.
