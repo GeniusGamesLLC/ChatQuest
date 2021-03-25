@@ -17,6 +17,17 @@ If a chat message needs to be sent to Twitch, it spins up a chat client, send th
 - The downfall to this process is there is a few second delay for each message because of the nature of serverless.
  - The upside, it is actually slows the game down a bit, and during testing it worked out really well because it didn't spam chat as fast as a natively running chatbot would.
 
+## Future Enhancements
+
+- Create an Overlay that will tie into OBS to show the current HP, game stats, etc.
+  - Overlays will allow quicker processing of events as well, as they can do countdown timers, call APIs, and get real time feedback that serverless can't.
+  - This will also keep costs down as the broadcaster's browser source on OBS will be doing the leg work, not our servers.
+- Create an extension that shows similar information, and also allow more advanced actions/attacks by using bits.
+- More feedback to users in chat if only using chat like HP progress every 10 or so percent.
+- Customizable options for broadcasters for channel points. Currently defaulted to a static 100 just for demonstration purposes.
+    - Some channels have been building up points for years and not being used. Some channels are used constantly.
+    - Since we don't know the economy per channel, and there isn't any analytics APIs to do analysis on, we will have to just allow the broadcasters to set the cost.
+
 ## Setting Env Variables
 Rename env.sample.json to env.json
 ```
@@ -36,8 +47,12 @@ Rename env.sample.json to env.json
 
 Navigate to `/functions` folder and run `npm run update:env`
 
-## Deploying to Firebase
-run `firebase deploy`
+## Firebase Setup
+
+- Create a project on Firebase.
+- Billing has to be turned and on the Blaze plan, since serverless can't call external APIs without billing enabled.
+- You may need to run `firebase target` or `firebase init` to link to your own project, as it will be a different name than the original since you can't have projects globally with the same name on Firebase.
+- run `firebase deploy` to push to Firebase
 
 ## Login to Chatbot
 Open the link generated after deploying to firebase for the function `chatBotLogin`.
