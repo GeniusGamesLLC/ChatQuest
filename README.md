@@ -10,7 +10,7 @@ All logic is handled on each EventSub event that comes into the app.
 - Attack and deduct HP from the boss with the action rewards
 - Determine if the boss was killed, and "Complete" the quest in the database.
 - Refund points because of async nature if the boss's HP is already at or below zero.
-- Clear out current quest from database, and start a new quest.
+- Clear out the current quest from the database, and then start a new quest.
 
 If a chat message needs to be sent to Twitch, it spins up a chat client, send the message, then disconnects from the chat server.
 - This reduces costs because we don't need a server running 24/7 just to handle chat messages.
