@@ -25,8 +25,11 @@ If a chat message needs to be sent to Twitch, it spins up a chat client, send th
 - Create an extension that shows similar information, and also allow more advanced actions/attacks by using bits.
 - More feedback to users in chat if only using chat like HP progress every 10 or so percent.
 - Customizable options for broadcasters for channel points. Currently defaulted to a static 100 just for demonstration purposes.
-    - Some channels have been building up points for years and not being used. Some channels are used constantly.
-    - Since we don't know the economy per channel, and there isn't any analytics APIs to do analysis on, we will have to just allow the broadcasters to set the cost.
+  - Some channels have been building up points for years and not being used. Some channels are used constantly.
+  - Since we don't know the economy per channel, and there isn't any analytics APIs to do analysis on, we will have to just allow the broadcasters to set the cost.
+- More error handling, and ability to manually reset games.
+  - If the broadcaster deletes the action rewards mid game, there is no current recovery without manual database intervention.
+  - If the broadcaster deletes the start game reward, simply logging back in will reset the game, so if they want to turn it off, they simply need to delete the reward before someone starts it again.
 
 ## Setting Env Variables
 Rename env.sample.json to env.json
