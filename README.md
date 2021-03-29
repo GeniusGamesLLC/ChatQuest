@@ -3,6 +3,11 @@
 To use our cloud setup, login to the following link to get this setup on your own twitch page. You will need to be live as the requirements for the rewards have a 
 "Max Per Stream" limit.
 https://us-central1-chat-quest.cloudfunctions.net/webFunctionsTwitchLogin-broadcasterLogin 
+
+Once you login, the app will automatically create the first "Start Quest" reward. 
+As a broadcater you have unlimited points to test with, but since it's based on viewer you may or may not be actually able to beat the boss by yourself.
+
+If you delete the "start quest" reward manually, re-loggin in will re-setup the quest, but there is no current recovery if the rewards for actions are deleted, so please don't delete actions.
  
 ## Development Notes
 This is a completely serverless cloud based game and chat bot. 
