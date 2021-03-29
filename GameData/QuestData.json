@@ -89,7 +89,7 @@
     "attacks": [
       {
         "name": "Punch",
-        "description": "Physical",
+        "description": "A desperate attack to defend yourself!",
         "type": "Physical",
         "damage": 1,
         "color": "#ED7014",
