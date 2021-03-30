@@ -95,6 +95,10 @@ export const startQuest = async (channelId:string)=>{
       sendChatMessageFromChatBot(channelId,['New Quest Waiting! Use Channel Points to start quest!'],true)
         .catch((e)=>{console.log('sendChatMessageFromChatBot error',e);});
     }
+    else{
+      await setDataToDatabasePath({},getCurrentQuestDataPath(channelId));
+      await startQuest(channelId);
+    }
   }
   catch (e) {
     throw new Error(e);
