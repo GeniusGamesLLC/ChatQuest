@@ -188,8 +188,7 @@ export const processEventSubRedemption = async (eventSubChannelRedemptionAddEven
         [eventSubChannelRedemptionAddEventData.id],
         'CANCELED'
       );
-      sendChatMessageFromChatBot(eventSubChannelRedemptionAddEventData.broadcaster_user_id,[`@${eventSubChannelRedemptionAddEventData.user_name} The quest is already starting. Refunding points.`])
-        .catch((e)=>{console.log('sendChatMessageFromChatBot error',e);});
+      //sendChatMessageFromChatBot(eventSubChannelRedemptionAddEventData.broadcaster_user_id,[`@${eventSubChannelRedemptionAddEventData.user_name} The quest is already starting. Refunding points.`]).catch((e)=>{console.log('sendChatMessageFromChatBot error',e);});
     }
     //Quest is not started
     else{
@@ -258,15 +257,14 @@ export const processEventSubRedemption = async (eventSubChannelRedemptionAddEven
           );
         }
         else{
-          sendChatMessageFromChatBot(eventSubChannelRedemptionAddEventData.broadcaster_user_id,[`@${eventSubChannelRedemptionAddEventData.user_name} The boss is already slain! Refunding points.`])
-            .catch((e)=>{console.log('sendChatMessageFromChatBot error',e);});
+          //sendChatMessageFromChatBot(eventSubChannelRedemptionAddEventData.broadcaster_user_id,[`@${eventSubChannelRedemptionAddEventData.user_name} The boss is already slain! Refunding points.`]).catch((e)=>{console.log('sendChatMessageFromChatBot error',e);});
           await twitchClient.helix.channelPoints.updateRedemptionStatusByIds(
             eventSubChannelRedemptionAddEventData.broadcaster_user_id,
             eventSubChannelRedemptionAddEventData.reward.id,
             [eventSubChannelRedemptionAddEventData.id],
             'CANCELED'
           );
-          await finishQuest(eventSubChannelRedemptionAddEventData.broadcaster_user_id);
+          //await finishQuest(eventSubChannelRedemptionAddEventData.broadcaster_user_id);
         }
         break;
       }
