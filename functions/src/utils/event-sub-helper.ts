@@ -1,6 +1,6 @@
 import {HelixEventSubSubscription} from "twitch";
 import {getAppTwitchClient} from "./twitch-api-client-helper";
-import {getEventSubRedemptionCallbackUrl} from "./env-helper";
+import {getClientId, getEventSubRedemptionCallbackUrl, getEventSubUserAuthGrantCallbackUrl} from "./env-helper";
 
 const crypto = require('crypto');
 /**
@@ -45,6 +45,27 @@ export const subscribeBroadcasterToEventSubCustomRedemptionAddTopic = async (cha
       {
         "method": 'webhook',
         "callback": getEventSubRedemptionCallbackUrl(),
+        "secret": eventSubSecret
+      }
+    );
+  }
+  catch (e) {
+    throw new Error(e);
+  }
+};
+
+export const subscribeToEventSubUserAuthGrant = async ():Promise<HelixEventSubSubscription> => {
+  try {
+    const twitchClient = await getAppTwitchClient();
+    return await twitchClient.helix.eventSub.createSubscription(
+      'user.authorization.grant',
+      'beta',
+      {
+        "client_id": getClientId()
+      },
+      {
+        "method": 'webhook',
+        "callback": getEventSubUserAuthGrantCallbackUrl(),
         "secret": eventSubSecret
       }
     );

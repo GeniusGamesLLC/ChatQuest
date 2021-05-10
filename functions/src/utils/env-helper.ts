@@ -27,3 +27,7 @@ export const getChatBotTwitchId = () =>{
 export const getEventSubRedemptionCallbackUrl = () =>{
   return functions.config().config.eventsubredemptioncallbackurl;
 };
+
+export const getEventSubUserAuthGrantCallbackUrl = () =>{
+  return functions.config().config.eventsubuserauthgrantcallbackurl;
+};
